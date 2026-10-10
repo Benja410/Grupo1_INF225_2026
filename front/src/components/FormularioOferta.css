@@ -1,0 +1,242 @@
+/* src/components/FormularioOferta.css */
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.formulario-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Evita que se estire de forma extraña */
+  padding: 40px 20px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.formulario-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  /* Sombra más amplia y difuminada para un look moderno */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+  padding: 45px;
+  width: 100%;
+  max-width: 750px; /* Un poco más ancho para que los checkboxes respiren */
+  border-top: 6px solid #e74c3c; /* Acento visual en la parte superior */
+}
+
+/* Encabezados centrados y limpios */
+.formulario-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.formulario-header h2 {
+  color: #000000;
+  margin: 0 0 10px 0;
+  font-size: 28px;
+}
+
+.formulario-header p {
+  color: #7f8c8d;
+  font-size: 15px;
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column; /* Apila la etiqueta y el input estrictamente hacia abajo */
+}
+
+.form-group label.main-label {
+  font-weight: 600;
+  color: #2c3e50; /* Un gris muy oscuro, más elegante que el negro puro */
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-textarea {
+  width: 96%; /* Ahora ocupan el 100% de los 450px permitidos por el form-group */
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  font-size: 0.95rem;
+  color: #1a202c;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+/* 3. Estilos específicos solo para el área de texto */
+.form-textarea {
+  min-height: 120px;
+  width: 96%;
+  resize: vertical;  /* Permite al usuario estirarlo, pero solo hacia abajo para no romper el diseño */
+  line-height: 1.5;
+}
+
+/* 4. Efecto Focus para ambos (cuando el usuario hace clic) */
+.form-group input:focus,
+.form-textarea:focus {
+  background-color: #ffffff;
+  border-color: #d94123;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(217, 65, 35, 0.15);
+}
+
+.form-group input::placeholder,
+.form-textarea::placeholder {
+  color: #a0aec0;
+}
+
+/* 5. Estilo para el mensaje de error */
+.error-text {
+  color: #c53030; /* Un rojo oscuro legible */
+  font-size: 0.85rem;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Selectores más elegantes */
+.form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #2d3436;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background-color: #ffffff;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Tarjetas individuales para las Categorías */
+.categoria-habilidades {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ecf0f1;
+  border-left: 4px solid #e74c3c; /* Línea de acento a la izquierda */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.categoria-habilidades:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+.categoria-titulo {
+  margin: 0 0 15px 0;
+  color: #000000;
+  font-size: 16px;
+  border-bottom: 1px solid #f1f2f6;
+  padding-bottom: 8px;
+}
+
+/* Grid optimizado para que quede centrado y ordenado */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #4b6584;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.checkbox-label:hover {
+  color: #2c3e50;
+}
+
+/* Casillas de verificación con color personalizado */
+.checkbox-label input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  accent-color: #e74c3c; /* Moderno: cambia el color azul/gris por defecto */
+}
+.buttons {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón prominente */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-submit:hover {
+  background-color: #e74c3c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+}
+
+.btn-submit:active {
+  transform: translateY(1px);
+}
+
+.volveralhome {
+  padding: 12px 24px;
+  background-color: transparent;
+  margin: 20px auto 0;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.volveralhome:hover {
+  background-color: #ffe4df;
+}

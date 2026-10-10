@@ -1,0 +1,232 @@
+/* =========================================
+   Layout Principal (Pantalla Dividida)
+========================================= */
+.home-layout {
+  display: flex;
+
+  background-color: #f8fafc; 
+  font-family: sans-serif;
+  align-items: flex-start;
+}
+
+/* =========================================
+   Barra Lateral (Sidebar)
+========================================= */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 97vh;
+  width: 250px;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.02);
+
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d94123;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre los botones del menú */
+  flex-grow: 1;
+}
+
+.sidebar-item {
+  padding: 12px 16px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #f8d3c3;
+  color: #000000;
+}
+
+/* =========================================
+   Área de Contenido (Derecha)
+========================================= */
+.home-content {
+  flex-grow: 1; /* Toma todo el espacio sobrante a la derecha de la barra */
+  width: calc(100% - 250px);
+  padding: 40px;
+}
+
+.offer-container {
+  max-width: 1000px;
+  width: 100%;
+  display: block;
+}
+
+.offer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.offer-header h1 {
+  margin: 0;
+  color: #1a202c;
+  font-size: 2.2rem;
+}
+
+.btn-logout {
+  padding: 10px 24px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  margin-top: auto;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.btn-logout:hover {
+  background-color: #c0392b;
+}
+
+
+.offer-state {
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #4a5568;
+  text-align: center;
+}
+
+.offer-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  width: 100%;
+}
+
+.offer-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 2px solid #e74c3c;
+}
+
+.offer-card h3 {
+  margin: 0 0 5px 0;
+}
+
+.etiqueta {
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+/* ==========================================================================
+   DASHBOARD KPIs (Encargado) - DISEÑO GRANDE Y HORIZONTAL
+   ========================================================================== */
+.resumen-kpi-container {
+  display: flex;            
+  justify-content: space-between;
+  gap: 24px;               
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.kpi-card {
+  flex: 1;                  /* Hace que los 3 bloques midan exactamente lo mismo y ocupen todo el ancho */
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;     
+  padding: 32px 24px;     
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.kpi-icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;             
+  height: 68px;
+  border-radius: 16px;
+  font-size: 2.2rem;        
+  margin-right: 24px;       
+  flex-shrink: 0;         
+}
+
+.kpi-info h3 {
+  margin: 0;
+  font-size: 2.6rem;        
+  font-weight: 800;
+  color: #1a202c;
+  line-height: 1;
+}
+
+.kpi-info p {
+  margin: 8px 0 0 0;
+  font-size: 1.05rem;       
+  color: #4a5568;
+  font-weight: 600;
+  white-space: nowrap;      
+}
+
+
+.kpi-alerta {
+  border-left: 6px solid #dd6b20;
+}
+
+.kpi-exito {
+  border-left: 6px solid #38a169;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.status-badge.pendiente {
+  background-color: #feebc8;
+  color: #c05621;
+}
+
+.status-badge.aprobada {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.status-badge.rechazada {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+}

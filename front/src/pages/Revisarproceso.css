@@ -1,0 +1,92 @@
+/* Contenedor principal de todo el acordeón */
+.acordeon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* Cada una de las filas */
+.acordeon-item {
+  background-color: #f8fafc; 
+  border-radius: 8px;        /* Bordes redondeados */
+  margin-bottom: 12px;       /* Separación vertical entre cada barra */
+  overflow: hidden;
+  color: #ffffff;            /* Letras blancas */
+}
+
+
+.titulo-acordeon {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #d94123;
+}
+
+
+/* La flechita de la derecha */
+.flecha {
+  transition: transform 0.3s ease; /* Animación suave para cuando gire */
+  font-size: 20px;
+}
+
+/* Si la sección está abierta, la flecha gira 180 grados */
+.flecha.open {
+  transform: rotate(180deg);
+}
+
+
+.info-acordeon {
+  padding: 20px 24px;
+  background-color: #f8fafc; 
+  border-top: 1px solid #f8fafc; /* Una línea sutil divisoria */
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1b1b1b; 
+}
+
+.acordeon-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  border: 1px solid #e2e8f0;
+}
+
+.btn-volver {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #d94123;
+  border: 2px solid #d94123;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-volver:hover {
+  background-color: #ebf4ff;
+}
+.hbox {
+  display: flex;         
+  flex-direction: row;
+  align-items: center;   
+  gap: 15px;  
+  flex-wrap: nowrap;           
+}

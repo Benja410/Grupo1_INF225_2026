@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+.App label{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin: 5px
+}
+
+.volveralhome {
+  background-color: transparent;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 250px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+
+}
+
+.volveralhome:hover {
+  background-color: #ffe4df;
+}

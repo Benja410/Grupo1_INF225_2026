@@ -1,0 +1,147 @@
+/* ==========================================================================
+   Estructuras del Panel de Revisiones
+   ========================================================================== */
+.revision-sections-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+}
+
+.subtitle-pendiente {
+  color: #dd6b20;
+  border-bottom: 2px solid #feebc8;
+}
+
+.subtitle-revisada {
+  color: #38a169;
+  border-bottom: 2px solid #c6f6d5;
+}
+
+/* Modificadores sutiles para tarjetas de revisión */
+.card-pendiente {
+  border-top: 4px solid #dd6b20;
+}
+
+.card-revisada {
+  border-top: 4px solid #38a169;
+}
+
+/* Botones de acción dentro de las cuadrículas */
+.btn-action-primary, .btn-action-secondary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-action-primary {
+  background-color: #d94123;
+  color: white;
+}
+
+.btn-action-primary:hover {
+  background-color: #b83218;
+}
+
+.btn-action-secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.btn-action-secondary:hover {
+  background-color: #cbd5e0;
+}
+
+/* Badges de estados */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.status-badge.aprobada { background-color: #c6f6d5; color: #22543d; }
+.status-badge.rechazada { background-color: #fed7d7; color: #742a2a; }
+
+/* ==========================================================================
+   Vista de Detalles de Evaluación
+   ========================================================================== */
+.revision-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.detail-card h3 {
+  color: #2c3e50;
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 6px;
+}
+
+.ia-card {
+  border-left: 5px solid #3182ce;
+}
+
+.full-width-card {
+  grid-column: 1 / -1;
+}
+
+.resumen-texto {
+  line-height: 1.6;
+  font-style: italic;
+  color: #4a5568;
+}
+
+.btn-descargar {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.btn-descargar:hover { background-color: #2b6cb0; }
+
+/* Botones de cierre/resolución */
+.action-buttons-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-aprobar, .btn-rechazar {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn-aprobar { background-color: #38a169; }
+.btn-rechazar { background-color: #e53e3e; }
+.btn-aprobar:hover, .btn-rechazar:hover { opacity: 0.9; }
+.btn-aprobar:active, .btn-rechazar:active { transform: scale(0.99); }

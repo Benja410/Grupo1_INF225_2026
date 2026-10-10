@@ -1,0 +1,35 @@
+import { Router } from 'express';
+import connection from "../db/connection.db.js";
+import {upload} from '../services/middlewares/upload.js';
+
+const router = Router()
+
+router.post('/subir_informe', upload.single('pdf_documento'), async (req, res) => {
+    try {
+        if (!req.file) {
+            return res.status(400).json({error: 'No hay un archivo que subir'});
+        }
+
+        const {rut_estudiante, id_practica, rut_supervisor} = req.body;
+        const rutaRelativa = `/uploads/${req.file.filename}`;
+
+        const subir_archivo = await connection.query(`
+            INSERT INTO practica_en_proceso (rut, id_practica, rut_supervisor, ruta_archivo, estado)
+            VALUES ($1, $2, $3, $4, 'Enviado para revisar')
+            ON CONFLICT (rut, id_practica)
+            DO UPDATE SET
+                ruta_archivo = EXCLUDED.ruta_archivo,
+                estado = 'Enviado para revisar'
+            RETURNING *;
+            `, [rut_estudiante, id_practica, rut_supervisor, rutaRelativa]);
+        res.json({
+            mensaje: 'Archivo enviado con éxito',
+            datos: subir_archivo.rows[0]
+        });   
+    } catch(error){
+        console.error("Error en el controlador de subida:", error);
+        res.status(500).json({error: 'Error interno al procesar el archivo.'});
+    }
+} );
+
+export default router;

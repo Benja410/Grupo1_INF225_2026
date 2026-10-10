@@ -1,0 +1,94 @@
+/* ==========================================================================
+   PANEL GESTIÓN DE POSTULANTES (VISTA EMPRESA)
+   ========================================================================== */
+
+
+.btn-volver {
+  padding: 10px 20px;
+  background-color: #e2e8f0;
+  color: #4a5568;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-volver:hover {
+  background-color: #cbd5e0;
+  color: #2d3748;
+}
+
+
+.empresa-acciones-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #edf2f7; /* Línea divisoria sutil dentro de la card */
+}
+
+
+.btn-empresa-aceptar,
+.btn-empresa-rechazar {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+
+.btn-empresa-aceptar {
+  background-color: #38a169;
+}
+
+.btn-empresa-aceptar:hover {
+  background-color: #2f855a;
+}
+
+
+.btn-empresa-rechazar {
+  background-color: #e53e3e;
+}
+
+.btn-empresa-rechazar:hover {
+  background-color: #c53030;
+}
+
+
+.btn-empresa-aceptar:active,
+.btn-empresa-rechazar:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   BADGES DE ESTADO (Consistencia con Home y Revisiones)
+   ========================================================================== */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.status-badge.pendiente {
+  background-color: #feebc8;
+  color: #c05621;
+}
+
+.status-badge.aceptado {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.status-badge.rechazado {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+}

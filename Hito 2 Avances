@@ -1,0 +1,5 @@
+- Creación vistas para los HU (boceto de cómo se vería la página)
+- Integración inicial con IA para resumir informes
+- Endpoint backend para generar resúmenes
+- Cambios centrados en el login
+- Clases esqueleto de BD para los servicios y controllers.

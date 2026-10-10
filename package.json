@@ -1,0 +1,38 @@
+{
+  "name": "inf236-sj-04",
+  "version": "1.0.0",
+  "description": "Este es el repositorio del *Grupo 4*, cuyos integrantes son:",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.inf.utfsm.cl:inf236-2026-1/inf236-sj-04.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file .env --watch src/index.js",
+    "start:front": "npm --prefix front --watch start",
+    "dev": "concurrently \"npm run start\" \"npm run start:front\"",
+    "install:front": "npm --prefix front install",
+    "build:front": "npm --prefix front run build",
+    "test:front": "npm --prefix front run test -- --watchAll=false",
+    "db:migrate": "node --env-file .env src/db/migrate.js"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^3.0.53",
+    "@google/genai": "^2.10.0",
+    "ai": "^6.0.168",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-session": "^1.18.1",
+    "multer": "^2.2.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
