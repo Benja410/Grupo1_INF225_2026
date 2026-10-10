@@ -1,12 +1,15 @@
-# Grupo 4
+# Grupo 1
 
-Este es el repositorio del *Grupo 4*, cuyos integrantes son:
+Este es el repositorio del *Grupo 1*, cuyos integrantes son:
 
-* Felipe Luengo - 202473509-8
-* Felipe Carrasco - 202473522-5
 * Bejamín Solís - 202430511-5
 * Ángel Peña - 202430503-4
-* **Tutor**: Miguel Huerta
+* Martin Cumbaynar - 202330503-0
+* Pablo Gajardo - 201804582-9
+* Diego Cisterna - 202023511-2
+* Sebastián Césped - 202273603-8
+
+* **Ayudante**: Josefino Pino
 
 ## Wiki
 
@@ -57,14 +60,6 @@ docker compose up --build
 
 Advertencia: `docker compose down -v` borra los datos guardados en la base de datos Docker.
 
-
-## Videos
-
-> Reemplazar con los enlaces correspondientes
-
-* [Video presentación cliente](https://www.youtube.com)
-* [Video presentación avance Hito3](https://usmcl-my.sharepoint.com/:v:/g/personal/bsolisl_usm_cl/IQCDaT4oQ2IhSrDkbC-OOwiKAWNM2SooF8fZjQQKkWWb-p8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=aRNdUE)
-* [Video presentación avance final Hito 5](https://usmcl-my.sharepoint.com/:v:/g/personal/bsolisl_usm_cl/IQCiKqOyy2TDSLUemhcvEYaMAcl8eLiXLP-KDA9XYumSWVY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=FwIN75)
 
 ## Aspectos técnicos relevantes
 
