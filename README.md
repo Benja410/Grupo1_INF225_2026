@@ -11,9 +11,6 @@ Este es el repositorio del *Grupo 1*, cuyos integrantes son:
 
 * **Ayudante**: Josefino Pino
 
-## Wiki
-
-Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.cl/inf236-2026-1/inf236-sj-04/-/wikis/home)
 
 ## Setup proyecto
 Para este proyecto se ocupa:
